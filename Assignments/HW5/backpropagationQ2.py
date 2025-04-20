@@ -8,7 +8,7 @@ X_train = np.array([
 ], dtype=float)
 y_train = np.array([0, 0, 1], dtype=float)
 
-# 2) Define the testing set (we'll predict these after training)
+# 2) Define the testing set 
 X_test = np.array([
     [1, 0, 0],   # Testing Data‑1
     [0, 0, 1],   # Testing Data‑2
@@ -24,7 +24,7 @@ def sigmoid(u):
 print("=== Backpropagation Demo (1 epoch) ===")
 print("Initial weights:", W, "\n")
 
-# 4) One epoch of SGD (pure online updates, no bias)
+# 4) One epoch of SGD (no bias)
 for i, (x, d) in enumerate(zip(X_train, y_train), start=1):
     # forward
     u = np.dot(W, x)
